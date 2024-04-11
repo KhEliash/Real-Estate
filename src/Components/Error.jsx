@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouteError } from "react-router-dom";
+import img from '../assets/404.jpg';
 
 const Error = () => {
   const error = useRouteError();
@@ -11,6 +12,9 @@ const Error = () => {
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
+<img src={img} alt="" className="w-full max-h-screen"/>
+
+      
     </div>
   );
 };
