@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Warehouses",
+      "segment_name": "Industrial",
+      "description": "A state-of-the-art warehouse facility designed for modern industrial operations.",
+      "price": "$500,000",
+      "status": "sale",
+      "area": "10,000 sq ft",
+      "location": "City Industrial Park",
+      "facilities": ["loading dock", "office space", "security system"],
+      "image":"https://i.ibb.co/ZzXNNPg/wearhouse.webp" 
+    },
+    {
+      "id": 2,
+      "estate_title": "Factories",
+      "segment_name": "Industrial",
+      "description": "Large manufacturing plant with ample space for production lines and storage.",
+      "price": "$1,200,000",
+      "status": "sale",
+      "area": "25,000 sq ft",
+      "location": "Industrial Zone A",
+      "facilities": ["assembly area", "warehouse", "parking lot"],
+      "image": "https://i.ibb.co/qYXb00J/Factories.jpg" 
+    },
+    {
+      "id": 3,
+      "estate_title": "Production plants",
+      "segment_name": "Industrial",
+      "description": "Multi-story office complex integrated with industrial facilities.",
+      "price": "$800,000",
+      "status": "sale",
+      "area": "15,000 sq ft",
+      "location": "Tech Industrial Park",
+      "facilities": ["conference rooms", "cafeteria", "data center"],
+      "image": "https://i.ibb.co/f03RqVH/Production-plants.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Industrial parks",
+      "segment_name": "Industrial",
+      "description": "High-tech factory equipped with modern amenities for efficient production.",
+      "price": "$950,000",
+      "status": "sale",
+      "area": "20,000 sq ft",
+      "location": "Manufacturing District",
+      "facilities": ["clean room", "training center", "cafeteria"],
+      "image": "https://i.ibb.co/9VS7Tgt/Industrial-park.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Cold storage facilities",
+      "segment_name": "Industrial",
+      "description": "Spacious warehouse available for rent in prime industrial location.",
+      "price": "$5,000/month",
+      "status": "rent",
+      "area": "30,000 sq ft",
+      "location": "Industrial Park East",
+      "facilities": ["loading docks", "climate control", "security fencing"],
+      "image": "https://i.ibb.co/D51rn56/Cold-storage-facilities.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Power plants",
+      "segment_name": "Industrial",
+      "description": "Vacant industrial land suitable for development into manufacturing facilities.",
+      "price": "Contact for Price",
+      "status": "sale",
+      "area": "5 acres",
+      "location": "Industrial Zone B",
+      "facilities": ["utilities access", "road frontage", "zoning permits"],
+      "image": "https://i.ibb.co/c23h80Z/Power-plants.jpg"
+    }
+  ]
+  

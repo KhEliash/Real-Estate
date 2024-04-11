@@ -1,5 +1,3 @@
- 
-
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
@@ -11,13 +9,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import img from "../assets/eaters-collective-12eHC6FxPyg-unsplash.jpg";
-
+ 
 const Header = () => {
   return (
     <div>
-      
-
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -26,17 +21,34 @@ const Header = () => {
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide>
-          <img src={img} alt="" className="h-[500px] w-screen" />
+          <img
+            src="https://i.ibb.co/PwHY8Td/dsd.jpg"
+            alt="dsd"
+            border="0"
+            className="lg:h-[600px] w-screen 
+            rounded-xl"
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img} alt="" />
+          <img
+            src="https://i.ibb.co/z66tL6m/ew.jpg"
+            alt="ew"
+            border="0"
+            className="lg:h-[600px] w-screen rounded-xl"
+          />
         </SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-         
+        <SwiperSlide>
+          <img
+            src="https://i.ibb.co/8xQJpT1/1df.jpg"
+            alt="1df"
+            border="0"
+            className="lg:h-[600px] w-screen rounded-xl"
+          />
+        </SwiperSlide>
         ...
       </Swiper>
     </div>

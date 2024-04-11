@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Components/Root.jsx";
 import Error from "./Components/Error.jsx";
 import Home from "./Components/Home.jsx";
+import UpdateProfile from "./Components/UpdateProfile.jsx";
+import UserProfile from "./Components/UserProfile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +18,17 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<Home></Home>
-      }
+        element:<Home></Home>,
+        loader:()=>fetch("/information.json"),
+      },
+      {
+        path:'/updateProfile',
+        element:<UpdateProfile></UpdateProfile>
+      },
+      {
+        path:'/userProfile',
+        element:<UserProfile></UserProfile>
+      },
     ]
   },
 ]);
