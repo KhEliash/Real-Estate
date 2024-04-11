@@ -1,9 +1,11 @@
  
 import { FaLocationDot } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const StateCards = ({ cardItem }) => {
   const {
     status,
+    id,
     price,
     description,
     segment_name,
@@ -29,8 +31,12 @@ const StateCards = ({ cardItem }) => {
         </div>
         <p className="flex items-center gap-2 text-gray-500"><FaLocationDot /> {location}</p>
         <div className="card-actions justify-end">
+          <Link to={`/cardDetails/${id}`}>
           <button className="btn btn-primary">View Property</button>
+
+          </Link>
         </div>
+
       </div>
     </div>
   );

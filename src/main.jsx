@@ -9,6 +9,7 @@ import Error from "./Components/Error.jsx";
 import Home from "./Components/Home.jsx";
 import UpdateProfile from "./Components/UpdateProfile.jsx";
 import UserProfile from "./Components/UserProfile.jsx";
+import CardsDetails from "./Components/CardsDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
       {
         path:'/userProfile',
         element:<UserProfile></UserProfile>
+      },
+      {
+        path:'/cardDetails/:id',
+        element:<CardsDetails></CardsDetails>,
+        loader:()=>fetch("/information.json"),
       },
     ]
   },

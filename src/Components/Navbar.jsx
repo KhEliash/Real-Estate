@@ -4,13 +4,16 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to={"/"} >Home</NavLink>
+        <NavLink to={"/"}>Home</NavLink>
       </li>
       <li>
         <NavLink to={"/updateProfile"}>Update Profile</NavLink>
       </li>
       <li>
         <NavLink to={"/userProfile"}>User Profile</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/dkdjdj"}>Error</NavLink>
       </li>
     </>
   );
@@ -44,9 +47,7 @@ const Navbar = () => {
         <a className="btn btn-ghost text-xl">FactoryFusion</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 flex gap-3">
-          {links}
-        </ul>
+        <ul className="menu menu-horizontal px-1 flex gap-3">{links}</ul>
       </div>
       <div className="navbar-end">
         <a className="btn">Button</a>

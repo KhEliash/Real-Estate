@@ -1,11 +1,15 @@
-import React from 'react';
+ 
+import { Helmet } from 'react-helmet';
 
 const UserProfile = () => {
-    return (
-        <div>
-            user profile page
-        </div>
-    );
+  return (
+    <div>
+      <Helmet>
+        <title>User Profile - Factory Fusion</title>
+      </Helmet>
+      user profile page
+    </div>
+  );
 };
 
 export default UserProfile;
