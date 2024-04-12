@@ -15,7 +15,7 @@ const StateCards = ({ cardItem }) => {
     location,
     area,
   } = cardItem;
-  console.log(cardItem);
+  // console.log(cardItem);
   return (
     <div className="card card-compact h-[]  bg-base-100 shadow-xl ">
       <figure>

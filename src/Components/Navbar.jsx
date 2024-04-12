@@ -67,14 +67,16 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <div className="flex items-center">
+          <div className="flex items-center lg:gap-2">
+            <div className="tooltip flex items-center" data-tip={user.email}>
             <div className="avatar">
-              <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+              <div className="w-5 lg:w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                 <img src={user.photoURL} />
               </div>
-            </div>
-            <p>{user.email}</p>
-            <button className="btn" onClick={handleSignOut}>
+              </div>                         
+            </div>                                             
+            <div/>
+            <button className="btn-sm lg:btn " onClick={handleSignOut}>
               Sign Out
             </button>
           </div>
@@ -89,3 +91,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+//  <p>{user.email}</p>

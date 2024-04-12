@@ -13,6 +13,7 @@ import CardsDetails from "./Components/CardsDetails.jsx";
 import Login from "./Components/Login.jsx";
 import Register from "./Components/Register.jsx";
 import AuthProvider from "./Components/Provider/AuthProvider.jsx";
+import PrivetRouts from "./Routs/PrivetRouts.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,11 +32,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/userProfile",
-        element: <UserProfile></UserProfile>,
+        element: <PrivetRouts><UserProfile></UserProfile>,</PrivetRouts>
       },
       {
         path: "/cardDetails/:id",
-        element: <CardsDetails></CardsDetails>,
+        element: <PrivetRouts><CardsDetails></CardsDetails></PrivetRouts>,
+        // element: <CardsDetails></CardsDetails>,
         loader: () => fetch("/information.json"),
       },
       {
