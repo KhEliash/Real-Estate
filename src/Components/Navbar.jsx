@@ -1,6 +1,21 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "./Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user,logOut } = useContext(AuthContext);
+  console.log(user);
+
+const handleSignOut=()=>{
+  logOut()
+  .then(result=>{
+    console.log(result.user);
+  })
+  .catch(error=>{
+    console.log(error);
+  })
+}
+
   const links = (
     <>
       <li>
@@ -17,6 +32,7 @@ const Navbar = () => {
       </li>
     </>
   );
+
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -39,18 +55,32 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[9] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">FactoryFusion</a>
+        <a className="btn btn-sm btn-ghost text-sm lg:text-xl">FactoryFusion</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex gap-3">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        {user ? (
+          <div className="flex items-center">
+            <div className="avatar">
+              <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <img src={user.photoURL} />
+              </div>
+            </div>
+            <p>{user.email}</p>
+            <button className="btn" onClick={handleSignOut}>Sign Out</button>
+          </div>
+        ) : (
+          <Link to={"/login"}>
+            <a className="btn btn-sm lg:btn">Login</a>
+          </Link>
+        )}
       </div>
     </div>
   );
