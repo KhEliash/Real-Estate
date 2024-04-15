@@ -18,7 +18,7 @@ const Error = () => {
         <i>{error.statusText || error.message}</i>
       </p>
       <Link>
-        <button className="btn bg-green-600 text-white hover:bg-green-400">
+        <button className="btn bg-gray-900 text-white hover:text-black">
           Go Home
         </button>
       </Link>

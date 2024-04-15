@@ -12,7 +12,7 @@ import "swiper/css/scrollbar";
  
 const Header = () => {
   return (
-    <div>
+    <div className="h-[]">
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -29,7 +29,7 @@ const Header = () => {
             src="https://i.ibb.co/PwHY8Td/dsd.jpg"
             alt="dsd"
             border="0"
-            className="lg:h-[600px] w-screen 
+            className="lg:h-[] w-screen 
             rounded-xl"
           />
         </SwiperSlide>
@@ -38,7 +38,7 @@ const Header = () => {
             src="https://i.ibb.co/z66tL6m/ew.jpg"
             alt="ew"
             border="0"
-            className="lg:h-[600px] w-screen rounded-xl"
+            className="lg:h-[ ] w-screen rounded-xl"
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -46,10 +46,10 @@ const Header = () => {
             src="https://i.ibb.co/8xQJpT1/1df.jpg"
             alt="1df"
             border="0"
-            className="h-[300px]lg:h-[600px] w-screen rounded-xl"
+            className="h-[300px]lg:h-[ ] w-screen rounded-xl"
           />
         </SwiperSlide>
-        ...
+     <p className="text-center">...</p>
       </Swiper>
     </div>
   );

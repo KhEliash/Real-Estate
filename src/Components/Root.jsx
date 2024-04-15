@@ -5,8 +5,8 @@ import { ToastContainer } from "react-toastify";
 
 const Root = () => {
   return (
-    <div>
-      <div className="container  mx-auto">
+    <div className="bg-gray-50">
+      <div className="container  mx-auto ">
         <ToastContainer></ToastContainer>
         <Navbar></Navbar>
         <Outlet></Outlet>

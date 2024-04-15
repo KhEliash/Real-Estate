@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./Provider/AuthProvider";
+import { FaPerson } from "react-icons/fa6";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -24,15 +25,15 @@ const Navbar = () => {
       <li>
         <NavLink to={"/updateProfile"}>Update Profile</NavLink>
       </li>
-       
+
       <li>
         <NavLink to={"/dkdjdj"}>Error</NavLink>
       </li>
     </>
   );
-    
+
   return (
-    <div className="navbar bg-base-100 mt-3">
+    <div className="navbar bg-gray-50 ">
       <div className="navbar-start">
         <div className="dropdown">
           <div
@@ -62,7 +63,9 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-sm btn-ghost text-sm lg:text-xl">FactoryFusion</a>
+        <a className="btn btn-sm  btn-ghost text-sm lg:text-2xl font-bold gap-0">
+          <span className="text-orange-600">Factory</span>Fusion
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 flex gap-3">{links}</ul>
@@ -70,7 +73,10 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className="flex justify-center items-center lg:gap-2">
-            <div className="tooltip flex items-center" data-tip={user.displayName}>
+            <div
+              className="tooltip tooltip-left flex items-center"
+              data-tip={user.displayName}
+            >
               <div className="avatar">
                 <div className="w-7 lg:w-12 rounded-full ">
                   <img src={user.photoURL} alt="Profile" />
@@ -78,14 +84,22 @@ const Navbar = () => {
               </div>
             </div>
             <div />
-            <button className="btn-sm btn lg:btn ml-2" onClick={handleSignOut}>
+            <button
+              className="btn-sm btn lg:btn ml-2  bg-gray-800 text-white hover:text-black"
+              onClick={handleSignOut}
+            >
               Sign Out
             </button>
           </div>
         ) : (
-          <Link to={"/login"}>
-            <a className="btn btn-sm lg:btn">Login</a>
-          </Link>
+          <div className="flex items-center gap-2">
+            <FaPerson />
+            <Link to={"/login"}>
+              <a className="btn btn-sm lg:btn bg-gray-800 text-white hover:text-black">
+                Login
+              </a>
+            </Link>
+          </div>
         )}
       </div>
     </div>
@@ -93,4 +107,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
- 

@@ -18,7 +18,7 @@ const Home = () => {
   console.log(states);
 
   return (
-    <div className="mx-3 lg:mx-0">
+    <div className="mx-3 lg:mx-0 ">
       
       <Helmet>
         <title>Home - Factory Fusion</title>

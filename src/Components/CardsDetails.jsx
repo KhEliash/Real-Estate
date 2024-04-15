@@ -24,13 +24,20 @@ const CardsDetails = () => {
     area,
   } = card;
   return (
-    <div className="flex flex-col lg:flex-row mb-12 mt-5 items-center gap-3">
-      
+    <div className=" ">
       <Helmet>
 8        <title>Details - Property details</title>
 9      </Helmet>
+
+<div className="  h-24 flex items-center justify-center text-3xl font-extrabold text-gray-600 bg-gray-100 rounded-xl">
+  Details of this Property
+</div>
+
+    <div className="flex flex-col lg:flex-row mb-12 mt-5 items-center gap-3">
       
       
+      
+       
       
       <div className="flex-1 px-4">
         <img src={image} alt="" className="w-full h-full rounded-xl" />
@@ -60,6 +67,7 @@ const CardsDetails = () => {
           </ol>
         </div>
       </div>
+    </div>
     </div>
   );
 };
