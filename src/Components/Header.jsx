@@ -20,7 +20,7 @@ const Header = () => {
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
+        // scrollbar={{ draggable: true }}
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log("slide change")}
       >
@@ -46,7 +46,7 @@ const Header = () => {
             src="https://i.ibb.co/8xQJpT1/1df.jpg"
             alt="1df"
             border="0"
-            className="lg:h-[600px] w-screen rounded-xl"
+            className="h-[300px]lg:h-[600px] w-screen rounded-xl"
           />
         </SwiperSlide>
         ...

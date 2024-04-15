@@ -40,7 +40,7 @@ const CardsDetails = () => {
         <p>{description}</p>
         <p>#{segment_name}</p>
         <div className="flex justify-between">
-          <p className="font-bold">For : {status}</p>
+          <p className="font-bold">For : <span className="text-red-600"> {status}</span></p>
           <p className="font-extrabold text-xl">{price}</p>
         </div>
         <div className="flex justify-between">

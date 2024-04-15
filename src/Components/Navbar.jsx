@@ -24,9 +24,9 @@ const Navbar = () => {
       <li>
         <NavLink to={"/updateProfile"}>Update Profile</NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink to={"/userProfile"}>User Profile</NavLink>
-      </li>
+      </li> */}
       <li>
         <NavLink to={"/dkdjdj"}>Error</NavLink>
       </li>
@@ -37,7 +37,11 @@ const Navbar = () => {
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-sm btn-ghost lg:hidden"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -68,15 +72,15 @@ const Navbar = () => {
       <div className="navbar-end">
         {user ? (
           <div className="flex items-center lg:gap-2">
-            <div className="tooltip flex items-center" data-tip={user.email}>
-            <div className="avatar">
-              <div className="w-5 lg:w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                <img src={user.photoURL} />
+            <div className="tooltip flex items-center" data-tip={user.displayName}>
+              <div className="avatar">
+                <div className="w-7 lg:w-12 rounded-full ">
+                  <img src={user.photoURL} alt="img" />
+                </div>
               </div>
-              </div>                         
-            </div>                                             
-            <div/>
-            <button className="btn-sm lg:btn " onClick={handleSignOut}>
+            </div>
+            <div />
+            <button className="btn-sm btn lg:btn ml-2" onClick={handleSignOut}>
               Sign Out
             </button>
           </div>
@@ -91,4 +95,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
-//  <p>{user.email}</p>
+ 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import StateCards from "./StateCards";
 import { Helmet } from "react-helmet";
 
@@ -19,6 +19,7 @@ const Home = () => {
 
   return (
     <div>
+      
       <Helmet>
         <title>Home - Factory Fusion</title>
       </Helmet>
