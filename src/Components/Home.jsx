@@ -18,14 +18,14 @@ const Home = () => {
   console.log(states);
 
   return (
-    <div>
+    <div className="mx-3 lg:mx-0">
       
       <Helmet>
         <title>Home - Factory Fusion</title>
       </Helmet>
       <Header></Header>
 
-      <div className="mt-12">
+      <div className="mt-12 text-center mb-12">
         <h1 className="text-2xl font-bold">Discover Industrial Estates</h1>
         <p className="mt-3 px-5 text-gray-500">
           Explore our curated selection of industrial estates tailored to meet

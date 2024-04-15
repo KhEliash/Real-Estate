@@ -14,11 +14,15 @@ const Login = () => {
   const google=()=>{
      
     googleLogIn();
+    navigate(location?.state ? location.state : "/");
+
     
   }
   const github=()=>{
     
     githubLogIn();
+    navigate(location?.state ? location.state : "/");
+
     
   }
 

@@ -24,17 +24,15 @@ const Navbar = () => {
       <li>
         <NavLink to={"/updateProfile"}>Update Profile</NavLink>
       </li>
-      {/* <li>
-        <NavLink to={"/userProfile"}>User Profile</NavLink>
-      </li> */}
+       
       <li>
         <NavLink to={"/dkdjdj"}>Error</NavLink>
       </li>
     </>
   );
-
+    
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 mt-3">
       <div className="navbar-start">
         <div className="dropdown">
           <div
@@ -71,11 +69,11 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <div className="flex items-center lg:gap-2">
+          <div className="flex justify-center items-center lg:gap-2">
             <div className="tooltip flex items-center" data-tip={user.displayName}>
               <div className="avatar">
                 <div className="w-7 lg:w-12 rounded-full ">
-                  <img src={user.photoURL} alt="img" />
+                  <img src={user.photoURL} alt="Profile" />
                 </div>
               </div>
             </div>

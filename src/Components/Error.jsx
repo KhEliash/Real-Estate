@@ -7,7 +7,7 @@ const Error = () => {
   const error = useRouteError();
   console.error(error);
   return (
-    <div>
+    <div className="text-center mt-3 space-y-3">
       <Helmet>
         <title>Error - Factory Fusion</title>
       </Helmet>

@@ -17,7 +17,7 @@ const StateCards = ({ cardItem }) => {
   } = cardItem;
   // console.log(cardItem);
   return (
-    <div className="card card-compact h-[490px]  bg-base-100 shadow-xl ">
+    <div className="card card-compact h-[]  bg-base-100 shadow-xl p-3 ">
       <figure>
         <img src={image} alt="card-img" className="w-full h-[220px]" />
       </figure>

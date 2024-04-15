@@ -6,9 +6,11 @@ import { ToastContainer } from "react-toastify";
 const Root = () => {
   return (
     <div>
-      <ToastContainer></ToastContainer>
-      <Navbar></Navbar>
-      <Outlet></Outlet>
+      <div className="container  mx-auto">
+        <ToastContainer></ToastContainer>
+        <Navbar></Navbar>
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
     </div>
   );
