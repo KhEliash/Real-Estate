@@ -38,7 +38,7 @@ const Header = () => {
               <h1 className="animate__animated animate__fadeInLeft md:text-3xl lg:text-5xl font-bold text-orange-500">
                 Welcome to Industrial Estates
               </h1>
-              <h2 className="text-center animate__animated animate__fadeInRight">
+              <h2 className="text-center animate__animated animate__fadeInRight text-yellow-400 font-bold">
                 Explore Our Diverse Range of Industrial Properties
               </h2>
               <p className="text-center hidden lg:block w-3/4">

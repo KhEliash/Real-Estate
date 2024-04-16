@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./Provider/AuthProvider";
 import { FaUser } from "react-icons/fa6";
-import { FaSignOutAlt } from "react-icons/fa";
+import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -103,8 +103,8 @@ const Navbar = () => {
             <FaUser className="border-2 rounded-full w-7 lg:w-10 h-7 lg:h-10" />
 
             <Link to={"/login"}>
-              <a className="btn btn-sm  bg-gray-800 text-white hover:text-black">
-                Login
+              <a className="btn btn-sm lg:btn-md bg-gray-800 text-white hover:text-black">
+               <span><FaSignInAlt/></span> Login
               </a>
             </Link>
           </div>
