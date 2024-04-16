@@ -1,21 +1,22 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { AuthContext } from "./Provider/AuthProvider";
+import swal from "sweetalert";
 
 const UpdateProfile = () => {
   const { user, updateUserProfile } = useContext(AuthContext);
-  console.log(user);
+   
   const handleUpdateProfile = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
     const photo = form.get("photo");
-    console.log(name, photo);
 
     updateUserProfile(name, photo).then(() => {
-      // logOut();
-      // navigate("/login");
-      alert("Update successfully");
+      swal({
+        text: "Update successfully",
+        icon: "success",
+      });
     });
   };
 
@@ -42,7 +43,8 @@ const UpdateProfile = () => {
             {user.email}
           </h1>
           <h1 className="">
-            <span className="font-bold text-orange-500">Photo URL: </span> {user.photoURL}
+            <span className="font-bold text-orange-500">Photo URL: </span>{" "}
+            {user.photoURL}
           </h1>
         </div>
       </div>
@@ -51,7 +53,10 @@ const UpdateProfile = () => {
 
       <div className="   mt-12  mb-5">
         <div className="text-center  ">
-          <h1 className="text-xl font-bold mb-3 text-orange-600"> Update Your Profile</h1>
+          <h1 className="text-xl font-bold mb-3 text-orange-600">
+            {" "}
+            Update Your Profile
+          </h1>
         </div>
         <div className="  mx-auto rounded-xl shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form className="card-body" onSubmit={handleUpdateProfile}>
