@@ -1,11 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "./Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
   const { createUser, logOut, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+  // console.log(showPassword, setShowPassword);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -26,8 +29,8 @@ const Register = () => {
       return;
     }
     if (!password.length >= 6) {
-      alert('Password should be at least 6 characters')
-      return
+      alert("Password should be at least 6 characters");
+      return;
     }
 
     // user create
@@ -91,17 +94,23 @@ const Register = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               name="password"
               placeholder="Password"
               className="input input-bordered"
               required
             />
+            <span
+              className="absolute right-2 bottom-4"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </span>
           </div>
           <div className="form-control mt-6">
             <button className="btn bg-gray-950 text-white hover:text-black">

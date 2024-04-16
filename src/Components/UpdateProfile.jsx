@@ -20,35 +20,38 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <Helmet>
         <title>Update Profile - Factory Fusion</title>
       </Helmet>
 
-      <div className="  flex w-2/3   mx-auto mt-5 bg-gray-100 rounded-xl shadow-lg flex-col lg:flex-row">
-        <div className="flex-1 border-r-2 flex justify-center items-center py-3">
+      <div className="card lg:card-side bg-base-100 shadow-xl w-2/3 mx-auto">
+        <figure className="bg-orange-300 p-8">
           <img
             src={user.photoURL}
-            alt="User photo"
-            className="w-64 h-64 rounded-full"
+            alt="Album"
+            className="rounded-full w-24 h-24"
           />
-        </div>
-
-        <div className="flex-1 flex  flex-col items-center justify-center space-y-4 p-5 bg-gray-900 mx-2 text-center text-white rounded-xl">
-          <h1 className="text-2xl font-bold">Name: {user.displayName}</h1>
-          <h1>
-            <span className="font-bold">Email: </span> {user.email}
+        </figure>
+        <div className="card-body bg-gray-900 text-white">
+          <h1 className="text-2xl font-bold ">
+            <span className="text-orange-500">Name:</span> {user.displayName}
           </h1>
-          <h1 className=" ">
+          <h1>
+            <span className="font-bold text-orange-500">Email: </span>{" "}
+            {user.email}
+          </h1>
+          <h1 className="">
             <span className="font-bold">Photo URL: </span> {user.photoURL}
           </h1>
         </div>
       </div>
+
       {/* form update */}
 
       <div className="   mt-12  mb-5">
         <div className="text-center  ">
-          <h1 className="text-xl font-bold mb-3"> Update Your Profile</h1>
+          <h1 className="text-xl font-bold mb-3 "> Update Your Profile</h1>
         </div>
         <div className="  mx-auto rounded-xl shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form className="card-body" onSubmit={handleUpdateProfile}>

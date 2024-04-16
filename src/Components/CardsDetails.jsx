@@ -24,7 +24,7 @@ const CardsDetails = () => {
     area,
   } = card;
   return (
-    <div className=" ">
+    <div className="mx-3 lg:mx-0">
       <Helmet>
 8        <title>Details - Property details</title>
 9      </Helmet>

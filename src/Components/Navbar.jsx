@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./Provider/AuthProvider";
-import { FaPerson } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa6";
+import { FaSignOutAlt } from "react-icons/fa";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -77,7 +78,7 @@ const Navbar = () => {
               className="tooltip tooltip-left flex items-center"
               data-tip={user.displayName}
             >
-              <div className="avatar">
+              <div className="avatar ">
                 <div className="w-7 lg:w-12 rounded-full ">
                   <img src={user.photoURL} alt="Profile" />
                 </div>
@@ -88,14 +89,18 @@ const Navbar = () => {
               className="btn-sm btn lg:btn ml-2  bg-gray-800 text-white hover:text-black"
               onClick={handleSignOut}
             >
+              <span>
+                <FaSignOutAlt />
+              </span>
               Sign Out
             </button>
           </div>
         ) : (
           <div className="flex items-center gap-2">
-            <FaPerson />
+            <FaUser className="border-2 rounded-full w-7 lg:w-10 h-7 lg:h-10" />
+
             <Link to={"/login"}>
-              <a className="btn btn-sm lg:btn bg-gray-800 text-white hover:text-black">
+              <a className="btn btn-sm  bg-gray-800 text-white hover:text-black">
                 Login
               </a>
             </Link>
