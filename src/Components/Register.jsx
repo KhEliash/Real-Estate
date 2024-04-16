@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "./Provider/AuthProvider";
-import { ToastContainer, toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import swal from "sweetalert";
 
 const Register = () => {
   const { createUser, logOut, updateUserProfile } = useContext(AuthContext);
@@ -20,35 +20,39 @@ const Register = () => {
     // console.log(name, photo, email, password);
 
     if (!/[A-Z]/.test(password)) {
-      alert("Password should have a CAPITAL latter");
+      swal("Password should have a CAPITAL latter");
       return;
     }
     if (!/[a-z]/.test(password)) {
-      alert("Password should have a SMALL latter");
+      swal("Password should have a SMALL latter");
 
       return;
     }
     if (!password.length >= 6) {
-      alert("Password should be at least 6 characters");
+      swal("Password should be at least 6 characters");
       return;
     }
 
     // user create
     createUser(email, password)
       .then((result) => {
-        // console.log(result.user);
-        // toast('success')
-
+        
         updateUserProfile(name, photo).then(() => {
           logOut();
           navigate("/login");
-          alert("Registered successfully");
+          swal({
+            text: "Registered successfully",
+            icon: "success",
+          });
         });
       })
       .catch((error) => {
         console.log(error);
-        alert(error.message);
-        // toast(error);
+        swal({
+          text: error.message,
+          icon: "warning",
+        });
+         
       });
   };
 
@@ -56,7 +60,9 @@ const Register = () => {
     <div className="hero min-h-screen bg-base-200">
       {/* <ToastContainer/> */}
       <div className="p-5 rounded-xl shadow-2xl bg-base-100">
-        <h1 className="font-bold text-2xl  text-center text-orange-500">Register Here</h1>
+        <h1 className="font-bold text-2xl  text-center text-orange-500">
+          Register Here
+        </h1>
         <form className=" lg:card-body " onSubmit={handleRegister}>
           <div className="form-control">
             <label className="label">

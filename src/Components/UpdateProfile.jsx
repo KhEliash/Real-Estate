@@ -51,7 +51,7 @@ const UpdateProfile = () => {
 
       <div className="   mt-12  mb-5">
         <div className="text-center  ">
-          <h1 className="text-xl font-bold mb-3 "> Update Your Profile</h1>
+          <h1 className="text-xl font-bold mb-3 text-orange-600"> Update Your Profile</h1>
         </div>
         <div className="  mx-auto rounded-xl shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <form className="card-body" onSubmit={handleUpdateProfile}>

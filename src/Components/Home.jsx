@@ -20,7 +20,6 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setStates(data));
   }, []);
-  console.log(states);
 
   return (
     <div className="mx-3 lg:mx-0 ">
@@ -28,7 +27,6 @@ const Home = () => {
         <title>Home - Factory Fusion</title>
       </Helmet>
       <Header></Header>
- 
 
       <div className="mt-12 text-center mb-12">
         <div data-aos="fade-left">
@@ -42,7 +40,10 @@ const Home = () => {
             efficiency and productivity in your industrial endeavors
           </p>
         </div>
-        <div data-aos="fade-right" className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4 items-center justify-center">
+        <div
+          data-aos="fade-right"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-4 items-center justify-center"
+        >
           {states.map((cardItem, id) => (
             <StateCards key={id} cardItem={cardItem}></StateCards>
           ))}

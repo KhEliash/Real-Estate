@@ -3,18 +3,25 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./Provider/AuthProvider";
 import { FaUser } from "react-icons/fa6";
 import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
+import swal from "sweetalert";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
 
   const handleSignOut = () => {
     logOut()
       .then((result) => {
-        console.log(result.user);
+        swal({
+          text: 'Logout successfully',
+          icon: 'success'
+        })
       })
       .catch((error) => {
-        console.log(error);
+         swal({
+          text: error.message,
+          icon: 'warning'
+         })
       });
   };
 
@@ -95,7 +102,7 @@ const Navbar = () => {
               <span>
                 <FaSignOutAlt />
               </span>
-              Sign Out
+              Log Out
             </button>
           </div>
         ) : (

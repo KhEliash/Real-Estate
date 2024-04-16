@@ -1,9 +1,17 @@
-import React from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
+
 
 const AboutUs = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div className="flex flex-col-reverse lg:flex-row mt-12 mb-12 gap-5 relative mx-3 lg:mx-0">
-        <h1 className="absolute left-0 lg:left-[40%] text-3xl lg:text-6xl font-extrabold text-orange-600 top-3">About Us</h1>
+        <h1 data-aos="fade-left" className="absolute left-0 lg:left-[40%] text-3xl lg:text-6xl font-extrabold text-orange-600 top-3">About Us</h1>
       <div className="flex-1">
         <img
           src="https://i.ibb.co/bP7SSDJ/house-investments-elements-assortment.jpg"
