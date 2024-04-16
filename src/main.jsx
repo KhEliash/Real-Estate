@@ -12,6 +12,7 @@ import Login from "./Components/Login.jsx";
 import Register from "./Components/Register.jsx";
 import AuthProvider from "./Components/Provider/AuthProvider.jsx";
 import PrivetRouts from "./Routs/PrivetRouts.jsx";
+import AboutUs from "./Components/AboutUs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
             <CardsDetails></CardsDetails>
           </PrivetRouts>
         ),
-        // element: <CardsDetails></CardsDetails>,
+
         loader: () => fetch("/information.json"),
       },
       {
@@ -50,6 +51,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/aboutUs",
+        element: (
+          <PrivetRouts>
+            <AboutUs></AboutUs>
+          </PrivetRouts>
+        ),
       },
     ],
   },

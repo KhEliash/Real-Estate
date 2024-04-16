@@ -46,7 +46,7 @@ const Login = () => {
         <title>Login - Factory Fusion</title>
       </Helmet>
       <div className="p-5 rounded-xl shadow-2xl bg-base-100">
-        <h1 className="font-bold text-2xl text-center">Login Here</h1>
+        <h1 className="font-bold text-2xl text-center text-orange-500">Login Here</h1>
         <form className="lg:card-body" onSubmit={handleLogin}>
           <div className="form-control">
             <label className="label">

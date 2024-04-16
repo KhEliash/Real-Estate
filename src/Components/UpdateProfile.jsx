@@ -20,17 +20,17 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="">
+    <div className="mt-12 text-sm lg:text-neutral">
       <Helmet>
         <title>Update Profile - Factory Fusion</title>
       </Helmet>
 
       <div className="card lg:card-side bg-base-100 shadow-xl w-2/3 mx-auto">
-        <figure className="bg-orange-300 p-8">
+        <figure className="bg-orange-500 p-8">
           <img
             src={user.photoURL}
             alt="Album"
-            className="rounded-full w-24 h-24"
+            className="rounded-full w-36 h-36 "
           />
         </figure>
         <div className="card-body bg-gray-900 text-white">
@@ -42,7 +42,7 @@ const UpdateProfile = () => {
             {user.email}
           </h1>
           <h1 className="">
-            <span className="font-bold">Photo URL: </span> {user.photoURL}
+            <span className="font-bold text-orange-500">Photo URL: </span> {user.photoURL}
           </h1>
         </div>
       </div>

@@ -56,7 +56,7 @@ const Register = () => {
     <div className="hero min-h-screen bg-base-200">
       {/* <ToastContainer/> */}
       <div className="p-5 rounded-xl shadow-2xl bg-base-100">
-        <h1 className="font-bold text-2xl  text-center">Register Here</h1>
+        <h1 className="font-bold text-2xl  text-center text-orange-500">Register Here</h1>
         <form className=" lg:card-body " onSubmit={handleRegister}>
           <div className="form-control">
             <label className="label">

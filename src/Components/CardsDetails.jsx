@@ -29,7 +29,7 @@ const CardsDetails = () => {
 8        <title>Details - Property details</title>
 9      </Helmet>
 
-<div className="  h-24 flex items-center justify-center text-3xl font-extrabold text-gray-600 bg-gray-100 rounded-xl">
+<div className="  h-24 flex items-center justify-center text-3xl font-extrabold text-orange-600 bg-gray-100 rounded-xl">
   Details of this Property
 </div>
 

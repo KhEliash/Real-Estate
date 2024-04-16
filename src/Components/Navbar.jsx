@@ -26,6 +26,9 @@ const Navbar = () => {
       <li>
         <NavLink to={"/updateProfile"}>Update Profile</NavLink>
       </li>
+      <li>
+        <NavLink to={"/aboutUs"}>About Us</NavLink>
+      </li>
 
       <li>
         <NavLink to={"/dkdjdj"}>Error</NavLink>
@@ -86,7 +89,7 @@ const Navbar = () => {
             </div>
             <div />
             <button
-              className="btn-sm btn lg:btn ml-2  bg-gray-800 text-white hover:text-black"
+              className="btn-sm btn lg:btn lg:bg-gray-800 lg:text-white ml-2  bg-gray-800 text-white hover:text-black"
               onClick={handleSignOut}
             >
               <span>
