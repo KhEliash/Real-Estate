@@ -13,15 +13,15 @@ const Navbar = () => {
     logOut()
       .then((result) => {
         swal({
-          text: 'Logout successfully',
-          icon: 'success'
-        })
+          text: "Logout successfully",
+          icon: "success",
+        });
       })
       .catch((error) => {
-         swal({
+        swal({
           text: error.message,
-          icon: 'warning'
-         })
+          icon: "warning",
+        });
       });
   };
 
@@ -111,7 +111,10 @@ const Navbar = () => {
 
             <Link to={"/login"}>
               <a className="btn btn-sm lg:btn-md bg-gray-800 text-white hover:text-black">
-               <span><FaSignInAlt/></span> Login
+                <span>
+                  <FaSignInAlt />
+                </span>{" "}
+                Login
               </a>
             </Link>
           </div>

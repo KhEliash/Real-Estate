@@ -29,7 +29,7 @@ const CardsDetails = () => {
         8 <title>Details - Property details</title>9{" "}
       </Helmet>
 
-      <div className="  h-24 flex items-center justify-center text-3xl font-extrabold text-orange-600 bg-gray-100 rounded-xl">
+      <div className="  h-24 flex items-center justify-center text-3xl font-extrabold text-orange-500 bg-gray-100 rounded-xl">
         Details of this Property
       </div>
 
@@ -45,7 +45,7 @@ const CardsDetails = () => {
             <p className="font-bold">
               For : <span className="text-red-500"> {status}</span>
             </p>
-            <p className="font-extrabold text-xl">{price}</p>
+            <p className="font-extrabold text-xl text-green-500">{price}</p>
           </div>
           <div className="flex justify-between">
             <p className="flex items-center gap-2">

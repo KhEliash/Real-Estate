@@ -7,18 +7,21 @@
 * ### Comprehensive Industrial Listings:
   Browse through a diverse range of industrial estates, including warehouses, factories, production plants, industrial parks, and more, all in one place.
 * ### Advanced Search Filters:
- Utilize advanced search filters to narrow down your options based on location, size, price, facilities, and other customizable criteria to find the perfect industrial space for your needs.
+  Utilize advanced search filters to narrow down your options  based on location, size, price, facilities, and other  customizable criteria to find the perfect industrial space  for your needs.
 * ### Interactive Maps:
- Visualize property locations with interactive maps, allowing you to explore nearby amenities, transportation routes, and other crucial factors affecting your decision-making process.
+  Visualize property locations with interactive maps,  allowing you to explore nearby amenities, transportation  routes, and other crucial factors affecting your  decision-making process.
 * ### Personalized Recommendations:
- Receive tailored recommendations based on your preferences and requirements, ensuring that you discover industrial estates that align with your specific business goals and objectives.
+  Receive tailored recommendations based on your preferences  and requirements, ensuring that you discover industrial  estates that align with your specific business goals and  objectives.
 * ### Expert Guidance:
- Benefit from expert guidance and support throughout your property search journey, with access to industry insights, market trends, and professional advice to make informed decisions and maximize your investment potential.
+  Benefit from expert guidance and support throughout your  property search journey, with access to industry insights,  market trends, and professional advice to make informed  decisions and maximize your investment potential.
 
 
  ## Npm packages used ...
-* Swiper slider
+* ### Swiper slider
+  Added for banner slider 
 
-* AOS pack
+* ### AOS pack
+  Added for state card section and About us section
 
-* Animate.style
+* ### Animate.style
+  Added for slider text 

@@ -2,8 +2,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-
-
 const AboutUs = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -11,7 +9,12 @@ const AboutUs = () => {
 
   return (
     <div className="flex flex-col-reverse lg:flex-row mt-12 mb-12 gap-5 relative mx-3 lg:mx-0">
-        <h1 data-aos="fade-left" className="absolute left-0 lg:left-[40%] text-3xl lg:text-6xl font-extrabold text-orange-600 top-3">About Us</h1>
+      <h1
+        data-aos="fade-left"
+        className="absolute left-0 lg:left-[40%] text-3xl lg:text-6xl font-extrabold text-orange-600 top-3"
+      >
+        About Us
+      </h1>
       <div className="flex-1">
         <img
           src="https://i.ibb.co/bP7SSDJ/house-investments-elements-assortment.jpg"
@@ -21,9 +24,10 @@ const AboutUs = () => {
       </div>
       <div className="flex-1 mt-24 text-gray-600">
         <p>
-          At FactoryFusion, we are passionate about connecting businesses with
-          the perfect industrial spaces to thrive. With years of experience in
-          the real estate industry, our team is dedicated to providing <br />
+          <span className="text-3xl text-orange-500 font-bold">A</span>t
+          FactoryFusion, we are passionate about connecting businesses with the
+          perfect industrial spaces to thrive. With years of experience in the
+          real estate industry, our team is dedicated to providing <br />
           <br />
           unparalleled service and expertise to our clients. Our mission is to
           streamline the process of finding and securing industrial estates,
@@ -35,7 +39,6 @@ const AboutUs = () => {
           technology and industry insights to deliver personalized solutions
           <br />
           <br />
-
           tailored to your specific requirements. Whether you're expanding your
           operations, relocating your business, or starting a new venture,
           FactoryFusion is your trusted partner every step of the way. Partner

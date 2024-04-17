@@ -30,7 +30,9 @@ const Home = () => {
 
       <div className="mt-12 text-center mb-12">
         <div data-aos="fade-left">
-          <h1 className="text-2xl font-bold text-orange-500">Discover Industrial Estates</h1>
+          <h1 className="text-2xl font-bold text-orange-500">
+            Discover Industrial Estates
+          </h1>
           <p className="mt-3 px-5 text-gray-500">
             Explore our curated selection of industrial estates tailored to meet
             the diverse needs of manufacturing, warehousing, and production.

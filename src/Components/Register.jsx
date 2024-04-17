@@ -36,7 +36,6 @@ const Register = () => {
     // user create
     createUser(email, password)
       .then((result) => {
-        
         updateUserProfile(name, photo).then(() => {
           logOut();
           navigate("/login");
@@ -52,7 +51,6 @@ const Register = () => {
           text: error.message,
           icon: "warning",
         });
-         
       });
   };
 

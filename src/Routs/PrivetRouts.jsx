@@ -8,9 +8,7 @@ const PrivetRouts = ({ children }) => {
   // console.log(location);
   if (loading) {
     return (
-      <div
-       className="w-full h-screen flex items-center justify-center"
-       >
+      <div className="w-full h-screen flex items-center justify-center">
         <span className="loading loading-spinner text-info loading-lg"></span>
       </div>
     );

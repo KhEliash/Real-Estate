@@ -1,5 +1,10 @@
 .gradient {
-  background-image: linear-gradient(to right ,#1e1e1e, transparent, rgb(31, 31, 31));
+  background-image: linear-gradient(
+    to right,
+    #1e1e1e,
+    transparent,
+    rgb(31, 31, 31)
+  );
   background-size: "cover";
   background-position: "center";
 }

@@ -49,26 +49,26 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     const form = new FormData(e.currentTarget);
-    console.log(form);
+    // console.log(form);
     const email = form.get("email");
     const password = form.get("password");
     // console.log(email, password);
 
     signIn(email, password)
-    .then((result) => {
-      swal({
-        text: "Successfully login",
-        icon: "success",
-      });
+      .then((result) => {
+        swal({
+          text: "Successfully login",
+          icon: "success",
+        });
 
-      navigate(location?.state ? location.state : "/");
-    })
-    .catch((error) => {
-      swal({
-        text: error.message,
-        icon: "warning",
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        swal({
+          text: error.message,
+          icon: "warning",
+        });
       });
-    });
   };
 
   return (
