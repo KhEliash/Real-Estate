@@ -17,8 +17,8 @@
 
 
  ## Npm packages used ...
- 1. Swiper slider
+* Swiper slider
 
- 2. AOS pack
+* AOS pack
 
- 3. Animate.style
+* Animate.style

@@ -35,8 +35,8 @@ const UpdateProfile = () => {
           />
         </figure>
         <div className="card-body bg-gray-900 text-white">
-          <h1 className="text-2xl font-bold ">
-            <span className="text-orange-500">Name:</span> {user.displayName}
+          <h1 className="text-xl lg:text-2xl font-bold ">
+            <span className="text-orange-500 text-xl lg:text-2xl">Name:</span> {user.displayName}
           </h1>
           <h1>
             <span className="font-bold text-orange-500">Email: </span>{" "}
